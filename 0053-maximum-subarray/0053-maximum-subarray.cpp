@@ -2,8 +2,8 @@ class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
         int CS=0, MS=INT_MIN;
-        for(int i=0;i<nums.size();i++){
-            CS+=nums[i];
+        for(auto i:nums){
+            CS+=i;
             MS=max(CS,MS);
             if(CS<0){
                 CS=0;
